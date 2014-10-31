@@ -40,11 +40,10 @@ public class MainActivity extends Activity implements OnClickListener {
         listView.setAdapter(adapter);    
     }
 	
-	protected void onStart(){
-		super.onStart();
+	protected void onRestart(){
+		super.onRestart();
 		Log.e("onRestart","Update Activity");
 		fillData();
-		Toast.makeText(this, "List Updated", 10).show();
 	}
 	
 	private void fillData() {
@@ -54,6 +53,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		array.clear();
 		String columns[] = new String[] {COLUMN_PERSON_ID, COLUMN_NAME, COLUMN_FACULTY, COLUMN_NUMBER, COLUMN_ADDRESS};
 		Cursor cursor = resolver.query(CONTENT_URI_STUDENTS, columns, null, null,null);
+		//StringBuilder sb = new StringBuilder();
 		Log.e("FillData","All column iterate");
 		if(!cursor.isAfterLast()) {
 			cursor.moveToFirst();
@@ -66,6 +66,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				p.address = cursor.getString(cursor.getColumnIndex(COLUMN_ADDRESS));
 
 				array.add(p);
+				//sb.append(p.toString()).append("\n");
 				cursor.moveToNext();
 			}
 		}

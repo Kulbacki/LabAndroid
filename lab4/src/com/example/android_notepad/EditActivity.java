@@ -49,7 +49,7 @@ public class EditActivity extends Activity {
 						
 						//db.insert(TABLE_STUDENTS, null, values);
 						resolver.insert(CONTENT_URI_STUDENTS, values);	
-						finish();
+						//finish();
 					}		
 	        });	
 	 }
