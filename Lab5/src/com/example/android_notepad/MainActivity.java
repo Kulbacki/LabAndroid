@@ -104,10 +104,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if(v.getId() == R.id.buttonQuery){
+			Log.d("onClick", "Button Query clicked");
 			Intent intent = new Intent(MainActivity.this, EditActivity.class);
 			startActivity(intent);
 		}
 		else if(v.getId() == R.id.buttonUpdate){
+			Log.d("onClick", "Button Update clicked");
 				myservice.startOperation();
 			}
 	

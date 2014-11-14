@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">StudBook</string>
-    <string name="add_contact">Добавить контакт</string>
-    <string name="no_studbasetable">Список пуст</string>
-    <string name="submit_contact">Сохранить контакт</string>
-
-</resources>

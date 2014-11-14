@@ -27,8 +27,9 @@
             android:authorities="com.example.android_notepad"
             android:name=".StudentContentProvider"
 			android:exported="true"
-			android:grantUriPermissions="true" >
+			android:grantUriPermissions="true" > 
         </provider>
+        <service android:name=".BoundService"></service>  
     </application>
 
 </manifest>
